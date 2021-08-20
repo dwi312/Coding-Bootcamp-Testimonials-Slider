@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+:root {
+    /* Colors */
+        /* Primary */
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+    /* Typography */
+        /* Body Copy */
+    --Fs-normal: 16px;
+        /* Font */
+    --ff-Inter: 'Inter';
+    --fw-300: 300;
+    --fw-500: 500;
+    --fw-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.text {
+    font-size: var(--Fs-normal);
+    text-align: center;
+    font-weight: var(--fw-300);
+}
+
+.text.description {
+    color: var(--Dark-Blue);
+}
+.text.name {
+    font-weight: var(--fw-700);
+    color: var(--Dark-Blue);
+}
+.text.job {
+    color: var(--Grayish-Blue);
+}
+
+.switch__btn {
+    position: absolute;
+    top: 42%;
+    left: 40%;
+    width: 80px;
+    height: 41px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.24);
+    border-radius: 50px;
+}
+.switch__btn-bx {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    transition: .3s ease-out;
+    cursor: pointer;
+}
+.slide:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.slide img {
+    width: 10px;
+    height: auto;
+}
+main {
+    min-height: 100vh;
+    width: 100%;
+    background: url(images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;  
+}
+.main__container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: url(images/pattern-bg.svg);
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hero__img {
+    position: relative;
+    display: block;
+    margin: auto auto;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.199);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img.tanya {
+    background: url(images/image-tanya.jpg) no-repeat center;
+    background-size: contain;
+    transition: 1s ease-in;
+}
+.img.john {
+    background: url(images/image-john.jpg) no-repeat center;        
+    background-size: contain;
+    transition: 1s ease-out;
+}
+.text__description {
+    width: 100%;
+    background: url(images/pattern-quotes.svg) no-repeat top center;
+    background-size: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.text.description {
+    width: 90%;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.profesional {
+    position: relative;
+}
+
+.description.tanya,
+.profesional.tanya {
+    display: none;
+}
+.description.tanya.act,
+.profesional.tanya.act {
+    display: block;
+
+}
+.description.john,
+.profesional.john {
+    display: none;
+    transition: 1s ease-out;
+
+}
+.description.john.act,
+.profesional.john.act {
+    display: block;
+}
+
+@media screen and (max-width: 426px) {
+    main {
+        max-width: 427px;
+    }
+    .main__container {
+        top: 24px;
+        max-width: 327px;
+        min-height: 619px;
+    }
+    .card__container {
+        display: grid;
+        grid-template-rows: 308px 280px;
+        row-gap: 31px;
+    }
+    .hero__img {
+        width: 253px;
+        height: 252.5px;
+    }
+    .img.tanya {
+        width: 100%;
+        height: 252.5px;
+    }
+    .img.john {
+        width: 100%;
+        height: 252.5px;
+    }
+
+    .text__description {
+        background-size: 20%;
+    }
+    .profesional {
+        bottom: 35px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    main {
+        max-width: 427px;
+    }
+    .main__container {
+        top: 24px;
+        max-width: 327px;
+        min-height: 619px;
+    }
+    .card__container {
+        display: grid;
+        grid-template-rows: 308px 280px;
+        row-gap: 31px;
+    }
+    .hero__img {
+        width: 253px;
+        height: 252.5px;
+    }
+    .img.tanya {
+        width: 100%;
+        height: 252.5px;
+    }
+    .img.john {
+        width: 100%;
+        height: 252.5px;
+    }
+
+    .text__description {
+        background-size: 20%;
+    }
+    
+}
+
+@media screen and (min-width: 512px) {
+    :root {
+        --Fs-normal: 25px
+    }
+}
+@media screen and (min-width: 426px) {
+    main {
+        max-width: 768px;
+    }
+    .main__container {
+        top: 50px;
+        max-width: 427px;
+        min-height: 719px;
+    }
+    .card__container {
+        grid-template-rows: 408px 380px;
+        row-gap: 31px;
+    }
+    .hero__img {
+        width: 353px;
+        height: 352.5px;
+    }
+    .img.tanya,
+    .img.john {
+        width: 100%;
+        height: 352.5px;
+    }
+    .switch__btn {
+        top: 44.5%;
+    }
+    .text.description {
+        font-size: var(--Fs-normal);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 1024px;
+    }
+    .main__container {
+        top: 100px;
+        max-width: 570px;
+        min-height: 819px;
+    }
+    .card__container {
+        grid-template-rows: 508px 480px;
+        row-gap: 31px;
+    }
+    .hero__img {
+        width: 453px;
+        height: 452.5px;
+    }
+    .img.tanya,
+    .img.john {
+        width: 100%;
+        height: 452px;
+    }
+    .switch__btn {
+        top: 45%;
+    }
+    .text.description {
+        font-size: var(--Fs-normal);
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    main {
+        max-width: 1295px;
+        min-height: 768px;
+        background-size: 35%; 
+    }
+    .main__container {
+        top: 40px;
+        max-width: 1000px;
+        min-height: 656.854px;
+        background-size: contain;
+    }
+    .card__container {
+        margin: 0 auto;
+        height: 656.854px;
+        grid-template-rows: none;
+        row-gap: 0;
+        grid-template-columns: 445px 555px;
+    }
+    .hero__img {
+        grid-area: 1 / 2 / 2 / 3;
+        width: 500px;
+        height: 500px;
+    }
+    .switch__btn {
+        width: 115px;
+        height: 56px;
+        top: 84%;
+        left: 52.5%;
+    }
+    .img.tanya,
+    .img.john {
+        width: 100%;
+        height: 540px;
+    }
+    .text__description {
+        position: relative;
+        left: 130px;
+        margin: 163px auto 150px;
+        grid-area: 1 / 1 / 2 / 2;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 31px;
+        background-position: top left;
+        background-position-x: 90px;
+    }
+    .text.description {
+        letter-spacing: 1px;
+        font-weight: var(--fw-300);
+    }
+    .profesional.tanya.act,
+    .profesional.john.act {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 10px;
+    }
+    .text.description,
+    .text.name,
+    .text.job {
+        width: 100%;
+        text-align: left;
+    }
+    .text.name,
+    .text.job {
+        font-size: 20px;
+    }
+
+}
+@media screen and (min-width: 1296px) {
+    main {
+        max-width: 1366px;
+        min-height: 768px;
+        background-size: 35%; 
+    }
+    .main__container {
+        top: 40px;
+        max-width: 1294px;
+        min-height: 656.854px;
+    }
+    .card__container {
+        height: 656.854px;
+        grid-template-rows: none;
+        row-gap: 0;
+        grid-template-columns: 597px 697px;
+    }
+    .hero__img {
+        grid-area: 1 / 2 / 2 / 3;
+        width: 540px;
+        height: 540px;
+    }
+    .switch__btn {
+        width: 115px;
+        height: 56px;
+        top: 88%;
+        left: 56.5%;
+    }
+    .img.tanya,
+    .img.john {
+        width: 100%;
+        height: 540px;
+    }
+    .text__description {
+        position: relative;
+        left: 130px;
+        margin: 163px auto 150px;
+        grid-area: 1 / 1 / 2 / 2;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 31px;
+        background-position: top left;
+        background-position-x: 90px;
+    }
+    .text.description {
+        letter-spacing: 1px;
+        font-weight: var(--fw-300);
+    }
+    .profesional.tanya.act,
+    .profesional.john.act {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 10px;
+    }
+    .text.description,
+    .text.name,
+    .text.job {
+        width: 100%;
+        text-align: left;
+    }
+    .text.name,
+    .text.job {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    :root {
+        --Fs-normal: 27px
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    main {
+        max-width: 1440px;
+        min-height: 800px;
+        background-size: 35%; 
+    }
+    .main__container {
+        top: 50px;
+        max-width: 1294px;
+        min-height: 656.854px;
+    }
+    .card__container {
+        height: 656.8px;
+        grid-template-rows: none;
+        row-gap: 0;
+        grid-template-columns: 597px 697px;
+    }
+    .hero__img {
+        grid-area: 1 / 2 / 2 / 3;
+        width: 540px;
+        height: 540px;
+    }
+    .switch__btn {
+        width: 115px;
+        height: 56px;
+        top: 88%;
+        left: 56.5%;
+    }
+    .img.tanya,
+    .img.john {
+        width: 100%;
+        height: 540px;
+    }
+    .text__description {
+        position: relative;
+        left: 130px;
+        margin: 163px auto 150px;
+        grid-area: 1 / 1 / 2 / 2;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 31px;
+        background-position: top left;
+        background-position-x: 90px;
+    }
+    .text.description {
+        letter-spacing: 1px;
+        font-weight: var(--fw-300);
+    }
+    .profesional.tanya.act,
+    .profesional.john.act {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 10px;
+    }
+    .text.description,
+    .text.name,
+    .text.job {
+        width: 100%;
+        text-align: left;
+    }
+    .text.name,
+    .text.job {
+        font-size: 20px;
+    }
+}
+
+
